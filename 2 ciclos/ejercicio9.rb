@@ -12,13 +12,14 @@
 
 =end
 
-a = 1
-b = ['<table>', '<tbody>', '<tr>']
+num = 1
+b = ["<table>", "\t<tbody>", "\t\t<tr>"]
 
 
 3.times do
-  b.push ['<td> 1 </td>']
+  b.push ["\t\t\t<td> #{num} </td>"]
+  num += 1
 end
-b.push ['</table>', '</tbody>', '</tr>']
+b.push ["\t\t</tr>", "\t</tbody>", "</table>"]
 
 puts b

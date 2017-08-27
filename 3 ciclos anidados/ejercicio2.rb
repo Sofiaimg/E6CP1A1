@@ -24,3 +24,17 @@ Generar el código para imprimir la siguiente tabla:
   <tbody>
  </table>
 =end
+
+
+num = 1
+b = ["<table>", "<tbody>"]
+3.times do
+b.push ["\t<tr>"]
+4.times do
+  b.push ["\t  <td> #{num} </td>"]  
+  num += 1 
+end
+b.push ["\t</tr>"]
+end
+b.push ["</tbody>", "</table>"]
+puts b
